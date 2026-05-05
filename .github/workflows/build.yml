@@ -1,0 +1,35 @@
+name: Build LaTeX Resume to PDF
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Shreyas_Thakur_Resume
+          path: resume.pdf
+
+      - name: Commit and push PDF (on push only)
+        if: github.event_name == 'push'
+        run: |
+          git config --local user.email "thakursm11@gmail.com"
+          git config --local user.name "ShreyasThakur11"
+          git add -f resume.pdf
+          git diff --staged --quiet || git commit -m "Auto-build: Update resume PDF"
+          git push

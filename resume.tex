@@ -1,0 +1,220 @@
+%-------------------------
+% Resume in Latex
+% Author : Shreyas Thakur
+% Based off of: https://github.com/jakegut/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Shreyas Thakur} \\ \vspace{1pt}
+    \small +91 9937384867 $|$ \href{mailto:thakursm11@gmail.com}{\underline{thakursm11@gmail.com}} $|$
+    \href{https://linkedin.com/in/shreyas}{\underline{linkedin.com/in/shreyas}} $|$
+    \href{https://ShreyasThakur11.github.io}{\underline{ShreyasThakur11.github.io}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Institute of Chemical Technology, Mumbai}{Mumbai, India}
+      {Bachelor of Chemical Engineering}{2021 -- 2025}
+      \resumeItemListStart
+        \resumeItem{CGPA: 6.6 $|$ HSC: 85.67\% $|$ SSC: 85.20\%}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {In Plant Trainee}{Jun 2024 -- Aug 2024}
+      {Epigral Ltd.}{Gujarat, India}
+      \resumeItemListStart
+        \resumeItem{Analyzed catalyst selectivity \& deactivation issues in Hydrogen Peroxide unit}
+        \resumeItem{Investigated burner failures in HCl synthesis units}
+        \resumeItem{Performed a moisture-reduction study in Epichlorohydrin purification}
+        \resumeItem{Gained hands-on exposure to continuous plant operations via DCS}
+        \resumeItem{Completed industrial safety \& MOC exposure}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Plant Design -- Ambrettolide (25 TPA)} $|$ \emph{Final Year Project}}{Sep 2024 -- Apr 2025}
+          \resumeItemListStart
+            \resumeItem{Designed a complete chemical manufacturing plant for 25 TPA Ambrettolide (macrocyclic musk)}
+            \resumeItem{Evaluated multiple synthesis routes and selected the process based on technical feasibility and economics}
+            \resumeItem{Performed material and energy balances and designed major equipment with sizing calculations}
+            \resumeItem{Developed process flow diagrams (PFD), P\&ID, and conducted HAZOP and safety analysis}
+            \resumeItem{Prepared site and plant layout, effluent treatment scheme, project cost estimation, and financial analysis}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Impact of Climate Change on Water Quality} $|$ \emph{Seminar}}{Nov 2024 -- Jan 2025}
+          \resumeItemListStart
+            \resumeItem{Prepared a technical seminar on Impact of Climate Change on Water Quality and Evolution of Treatment Strategies}
+            \resumeItem{Studied physical, chemical, and biological water quality parameters and CPCB standards}
+            \resumeItem{Analysed impacts of climate change on surface water, groundwater, and coastal water systems}
+            \resumeItem{Reviewed conventional and advanced water treatment technologies, including membranes, AOPs, and biological treatment}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Petroleum Refinery Engineering} $|$ \emph{Indian Institute of Chemical Engineers}}{Feb 2022 -- Apr 2022}
+          \resumeItemListStart
+            \resumeItem{Completed a certification program covering refinery processes, operations, and industry practices}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Industrial Environmental Pollution Management} $|$ \emph{Terra-Green Technologies Pvt. Ltd.}}{Jun 2022 -- Jul 2022}
+          \resumeItemListStart
+            \resumeItem{Certification focused on pollution control techniques, environmental regulations, and sustainable industrial practices}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Industrial Internet of Things (IIoT)} $|$ \emph{NPTEL}}{2023}
+          \resumeItemListStart
+            \resumeItem{Secured Top 5\% rank in the course}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------LEADERSHIP-----------
+\section{Leadership \& Achievements}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{Creative Head} $|$ \emph{Bombay Technologist, ICT Mumbai}}{Sep 2023 -- Feb 2024}
+        \resumeItemListStart
+          \resumeItem{Led creative initiatives and content strategy for the Bombay Technologist publication}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Achievements}}{}
+        \resumeItemListStart
+          \resumeItem{Top 5\% in NPTEL Industrial Internet of Things Course}
+          \resumeItem{2nd Position in The Entrepreneur's Blueprint conducted by Vortex 2022}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Engineering}{: Process Simulation, HAZOP, PFD/P\&ID, Equipment Sizing, Mass \& Energy Balances} \\
+     \textbf{Software}{: MATLAB, Python, MS Excel, MS Office, Power BI} \\
+     \textbf{Languages}{: English, Hindi, Marathi}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
