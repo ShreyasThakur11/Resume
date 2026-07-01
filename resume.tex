@@ -18,7 +18,12 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifx\pdfgentounicode\undefined\else
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
 
 
 %----------FONT OPTIONS----------
@@ -57,8 +62,7 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+% PDF generation settings handled conditionally at the start of the document
 
 %-------------------------
 % Custom commands
