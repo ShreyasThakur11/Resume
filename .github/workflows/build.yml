@@ -1,40 +1,63 @@
-name: Build LaTeX Resume to PDF
+name: Build Resume PDF
 
 on:
   push:
-    branches: [ main, master ]
+    branches:
+      - main
   pull_request:
-    branches: [ main, master ]
-  workflow_dispatch:  # Allow manual trigger
+    branches:
+      - main
+  workflow_dispatch:  # allows manual trigger from GitHub UI
 
 permissions:
-  contents: write
+  contents: write  # needed to create GitHub Releases
 
 jobs:
-  build_latex:
+  build:
+    name: Compile LaTeX → PDF
     runs-on: ubuntu-latest
+
     steps:
-      - name: Set up Git repository
+      # 1. Checkout the repository
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
+      # 2. Compile resume.tex using tectonic (fast, self-contained LaTeX engine)
+      - name: Compile LaTeX with Tectonic
+        uses: wtfjoke/setup-tectonic@v3
         with:
-          root_file: resume.tex
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload PDF as artifact
+      - name: Build PDF
+        run: |
+          tectonic resume.tex
+          mv resume.pdf Shreyas_Thakur_Resume.pdf
+
+      # 3. Upload compiled PDF as a build artifact (available for 90 days)
+      - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Shreyas_Thakur_Resume
-          path: resume.pdf
+          name: resume-pdf
+          path: Shreyas_Thakur_Resume.pdf
+          retention-days: 90
 
-      - name: Commit and push PDF (on push only)
-        if: github.event_name == 'push'
-        run: |
-          git config --local user.email "thakursm11@gmail.com"
-          git config --local user.name "ShreyasThakur11"
-          git add -f resume.pdf
-          git diff --staged --quiet || git commit -m "Auto-build: Update resume PDF"
-          git push
+      # 4. Delete old release and tag to ensure fresh timestamp
+      - name: Delete old release and tag
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: gh release delete latest --yes --cleanup-tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+
+      # 5. On pushes to main: create fresh GitHub Release with the PDF
+      - name: Create GitHub Release with PDF
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: "Latest Resume"
+          body: |
+            Auto-generated resume PDF from the latest `main` branch commit.
+            Built from `resume.tex` using the Tectonic LaTeX engine.
+          files: Shreyas_Thakur_Resume.pdf
+          make_latest: true
