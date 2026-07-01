@@ -1,42 +1,22 @@
-# Resume — Shreyas Thakur
+# Shreyas Thakur | Professional Resume
 
-My professional resume built with **LaTeX** using [Jake's Resume Template](https://github.com/jakegut/resume).
+Welcome to my resume repository. I am an MBA student at the Indian Institute of Management (IIM), Mumbai, with a background in Chemical Engineering (B.Tech) from the Institute of Chemical Technology (ICT), Mumbai. My areas of interest and expertise include business strategy, financial modeling, process optimization, and analytical tools (Python, SQL, Power BI, Advanced Excel).
 
-## 🚀 How It Works
+This repository is maintained as a central hub for my professional resume, compiled directly from LaTeX source code and updated automatically to reflect my latest achievements, academic milestones, and professional experiences.
 
-This repository uses **GitHub Actions** to automatically compile the LaTeX source (`resume.tex`) into a PDF every time you push changes.
+---
 
-### Workflow
-1. Edit `resume.tex` with your latest info
-2. Push to `main` or `master` branch
-3. GitHub Actions automatically compiles it to `resume.pdf`
-4. The PDF is:
-   - 📦 Uploaded as a **build artifact** (downloadable from the Actions tab)
-   - 📄 Committed back to the repo automatically
+## 📄 Download Latest Resume
 
-## 📁 Files
+If you are a recruiter, hiring manager, or potential collaborator, you can view or download my latest professional resume here:
 
-| File | Description |
-|------|-------------|
-| `resume.tex` | LaTeX source file (edit this!) |
-| `resume.pdf` | Auto-generated PDF output |
-| `.github/workflows/build.yml` | GitHub Actions workflow |
+* [**Download Resume (PDF)**](../../releases/latest/download/Shreyas_Thakur_Resume.pdf)
 
-## 🛠️ Local Build (Optional)
+---
 
-If you want to compile locally:
-```bash
-pdflatex resume.tex
-```
+## 🔗 Connect With Me
 
-Or use [Overleaf](https://www.overleaf.com/) for online editing.
-
-## 📝 Template Credit
-
-Based on [Jake Gutierrez's Resume Template](https://github.com/jakegut/resume), which is based on [sb2nov/resume](https://github.com/sb2nov/resume).
-
-## 📬 Contact
-
-- **Email**: thakursm11@gmail.com
-- **LinkedIn**: [linkedin.com/in/shreyas](https://linkedin.com/in/shreyas)
-- **Website**: [ShreyasThakur11.github.io](https://ShreyasThakur11.github.io)
+* **Email:** [thakursm11@gmail.com](mailto:thakursm11@gmail.com)
+* **LinkedIn:** [linkedin.com/in/shreyasthakur11](https://www.linkedin.com/in/shreyasthakur11)
+* **GitHub:** [github.com/ShreyasThakur11](https://github.com/ShreyasThakur11)
+* **Website:** [ShreyasThakur11.github.io](https://ShreyasThakur11.github.io)
