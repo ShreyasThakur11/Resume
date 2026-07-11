@@ -2,11 +2,12 @@
 
 <br>
 
-<h3 align="center">Resume</h3>
+<h2 align="center">Resume</h2>
+
+<h3 align="center">Business strategy, financial modeling, process optimization, and analytics</h3>
 
 <p align="center">
-  Business strategy, financial modeling, process optimization, and analytics,<br>
-  backed by an engineering foundation.
+  Backed by an engineering foundation.
 </p>
 
 <br>
@@ -19,6 +20,13 @@
   <a href="https://www.linkedin.com/in/shreyasthakur11/"><img alt="LinkedIn profile" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge" /></a>
   &nbsp;&nbsp;
   <a href="mailto:thakursm11@gmail.com"><img alt="Email me" src="https://img.shields.io/badge/Email-334155?style=for-the-badge" /></a>
+</p>
+
+<br>
+<br>
+
+<p align="center">
+  <img alt="Resume views" src="https://komarev.com/ghpvc/?username=ShreyasThakur11&label=Resume%20views&color=2563eb&style=flat-square" />
 </p>
 
 <br>
