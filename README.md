@@ -5,8 +5,8 @@
 <h3 align="center">Resume</h3>
 
 <p align="center">
-  Compiled from LaTeX and published automatically as a PDF release.<br>
-  Focused on business strategy, financial modeling, process optimization, and analytics.
+  Business strategy, financial modeling, process optimization, and analytics,<br>
+  backed by an engineering foundation.
 </p>
 
 <br>
